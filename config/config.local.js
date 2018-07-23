@@ -13,13 +13,13 @@ module.exports = appInfo => {
     // 单数据库信息配置
     client: {
       // host
-      host: '118.25.15.11',
+      host: 'localhost',
       // 端口号
       port: '3306',
       // 用户名
       user: 'root',
       // 密码
-      password: 'penghang@4210',
+      password: '123456',
       // 数据库名
       database: 'shouqianba-merchant',
     },
