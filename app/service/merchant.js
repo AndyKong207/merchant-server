@@ -1,6 +1,8 @@
 `use strict`
-
+// import {pick} from 'lodash'
 const Service = require('egg').Service
+
+const _ = require('lodash')
 
 class MerchantService extends Service {
   async search() {
@@ -15,7 +17,7 @@ class MerchantService extends Service {
     let sql = ''
     if (id) {
       const result = await this.app.mysql.get('merchant', {id: id})
-      return result
+      return _.pick(result, ['id', 'name', 'province', 'city', 'district', 'street_address'])
     } else {
       return null
     }
